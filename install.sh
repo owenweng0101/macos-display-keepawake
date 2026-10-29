@@ -118,7 +118,7 @@ echo "已安装（模式：$MODE）"
 echo "  LaunchAgent: $PLIST"
 echo
 echo "当前状态："
-launchctl print "gui/$UID_NUM/$LABEL" 2>/dev/null | grep -E "^\s+(state|pid) " | sed 's/^/  /'
+launchctl print "gui/$UID_NUM/$LABEL" 2>/dev/null | grep -E "^\s+(state|pid) " | sed 's/^/  /' || true
 pmset -g assertions | grep -i "caffeinate" | sed 's/^/  /' || echo "  （lid-only 模式下开盖时不会持有断言，属正常）"
 echo
 pmset -g | grep -i displaysleep | sed 's/^/  /'
