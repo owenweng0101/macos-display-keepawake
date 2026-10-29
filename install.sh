@@ -114,7 +114,7 @@ launchctl bootstrap "gui/$UID_NUM" "$PLIST"
 sleep 1
 
 echo
-echo "已安装（模式：$MODE）"
+echo "已安装（模式：${MODE}）"
 echo "  LaunchAgent: $PLIST"
 echo
 echo "当前状态："
